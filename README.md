@@ -42,12 +42,14 @@ You can stop the cluster using:
 - Spark Job WebUI: http://localhost:4040/ (only works when Spark job is running on `spark-master`)
 - Spark History Server：http://
 localhost:18080/
+- Jupyternotebook http://localhost:8888/
 
 ## Connections
 
 Use Beeline to connect to HiveServer2 (Please make sure you have [Hive](https://cwiki.apache.org/confluence/display/Hive/AdminManual+Installation) installed first):
 
 ```
+login to hive container etc : docker exec -it container-name sh 
 beeline -u jdbc:hive2://localhost:10000/default -n hive -p hive
 ```
 - To submit spark job you can use:
